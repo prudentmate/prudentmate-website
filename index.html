@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PrudentMate | Business Technology Partner</title>
+<meta name="description" content="PrudentMate helps small and medium businesses with IT consulting, Microsoft 365, cybersecurity, cloud solutions and AI integration.">
+
+<link rel="icon" type="image/png" href="/images/logo_tab.png?v=3">
+<link rel="shortcut icon" type="image/png" href="/images/logo_tab.png?v=3">
+
+<style>
+:root{
+    --navy:#071d49;
+    --blue:#1d66ff;
+    --blue-dark:#0d48d9;
+    --text:#0b1f4d;
+    --muted:#5a6b88;
+    --light:#f3f8ff;
+    --border:#dfe9ff;
+    --shadow:0 10px 30px rgba(7,29,73,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: Segoe UI, Arial, sans-serif;
+    background:#ffffff;
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1220px;
+    margin:auto;
+}
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    font-weight:800;
+    font-size:1.9rem;
+    color:var(--navy);
+}
+
+.brand img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+}
+
+.brand span span{
+    color:var(--blue);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:34px;
+    font-weight:600;
+    color:var(--navy);
+}
+
+.nav-links a{
+    text-decoration:none;
+}
+
+.nav-links a:hover{
+    color:var(--blue);
+}
+
+.nav-cta{
+    background:var(--blue);
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:700;
+    box-shadow:0 8px 20px rgba(29,102,255,.2);
+}
+
+.hero{
+    background:linear-gradient(135deg,#ffffff 0%,#f3f8ff 100%);
+    padding:70px 0 55px;
+    text-align:center;
+}
+
+.hero-logo{
+    width:210px;
+    max-width:74%;
+    display:block;
+    margin:0 auto 18px;
+}
+
+h1{
+    font-size:4.5rem;
+    line-height:1.05;
+    font-weight:800;
+    letter-spacing:-2px;
+    color:var(--navy);
+}
+
+.mate{
+    color:var(--blue);
+}
+
+.tagline{
+    font-size:1.35rem;
+    color:var(--muted);
+    margin-top:12px;
+    font-weight:500;
+}
+
+.description{
+    max-width:820px;
+    margin:22px auto 0;
+    font-size:1.13rem;
+    color:var(--navy);
+}
+
+.hero-actions{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    margin-top:32px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    min-width:190px;
+    background:var(--blue);
+    color:white;
+    text-decoration:none;
+    padding:14px 26px;
+    border-radius:9px;
+    font-weight:700;
+    border:2px solid var(--blue);
+}
+
+.btn:hover{
+    background:var(--blue-dark);
+    border-color:var(--blue-dark);
+}
+
+.btn-secondary{
+    background:white;
+    color:var(--blue);
+}
+
+.btn-secondary:hover{
+    background:#eef5ff;
+    color:var(--blue-dark);
+}
+
+.services-wrap{
+    margin-top:64px;
+}
+
+.services-title{
+    font-size:1.5rem;
+    margin-bottom:8px;
+    color:var(--navy);
+}
+
+.services-subtitle{
+    color:var(--muted);
+    margin-bottom:26px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    min-height:260px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:28px 18px 22px;
+    background:white;
+    box-shadow:var(--shadow);
+	overflow:hidden;
+    text-decoration:none;
+    transition:.2s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(7,29,73,.12);
+    border-color:#bcd2ff;
+}
+
+.service-icon{
+    width:76px;
+    height:76px;
+    margin-bottom:18px;
+    object-fit:contain;
+}
+
+.card h3{
+    font-size:1.08rem;
+    line-height:1.3;
+    margin-bottom:12px;
+    color:var(--navy);
+}
+
+.card p{
+    color:var(--muted);
+    font-size:.95rem;
+    margin-bottom:18px;
+}
+
+.card .link{
+    margin-top:auto;
+    color:var(--blue);
+    font-weight:700;
+}
+
+.trust{
+    background:white;
+    padding:70px 0;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.trust-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    background:#f7fbff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px;
+
+    transition:all .25s ease;
+}
+
+.trust-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 28px rgba(7,29,73,.08);
+}
+
+.stat-icon{
+    width:60px;
+    height:60px;
+    flex-shrink:0;
+    margin-right:4px;
+}
+
+.trust-item strong{
+    display:block;
+    font-size:2.2rem;
+    line-height:1;
+    color:var(--navy);
+    margin-bottom:6px;
+}
+
+.trust-item span{
+    display:block;
+    color:var(--muted);
+    line-height:1.35;
+}
+
+.about-section{
+    background:linear-gradient(135deg,#f7fbff 0%,#ffffff 100%);
+    padding:75px 0;
+    text-align:center;
+}
+
+.section-title{
+    font-size:2.3rem;
+    color:var(--navy);
+    margin-bottom:18px;
+}
+
+.about-text{
+    max-width:900px;
+    margin:auto;
+    color:var(--muted);
+    font-size:1.1rem;
+}
+
+.contact-band{
+    padding:70px 0;
+    background:white;
+}
+
+.contact-box{
+    max-width:980px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    padding:28px 34px;
+    border:1px solid #bdd2ff;
+    border-radius:16px;
+    background:#f4f9ff;
+}
+
+.contact-box h2{
+    color:var(--navy);
+    margin-bottom:6px;
+}
+
+.contact-box p{
+    color:var(--muted);
+}
+
+footer{
+    background:var(--navy);
+    color:white;
+    padding:28px 0;
+}
+
+.footer-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    color:#d9e5ff;
+}
+
+.footer-row a{
+    color:#d9e5ff;
+    text-decoration:none;
+}
+
+@media(max-width:1050px){
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:760px){
+    .nav{
+        align-items:flex-start;
+        flex-direction:column;
+        padding:16px 0;
+    }
+
+    .nav-links{
+        width:100%;
+        justify-content:space-between;
+        gap:12px;
+        font-size:.95rem;
+    }
+
+    .nav-cta{
+        display:none;
+    }
+
+    h1{
+        font-size:3rem;
+    }
+
+    .hero-logo{
+        width:220px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="container nav">
+    <a class="brand" href="#home" aria-label="PrudentMate home">
+        <img src="/images/logo_tab.png" alt="PrudentMate icon">
+        <span>Prudent<span>Mate</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="https://www.linkedin.com/company/prudentmate/about/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+
+    <a class="nav-cta" href="mailto:office@prudentmate.com?subject=PrudentMate%20Consultation%20Request">Contact Us</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container">
+
+<img src="/images/logo.png" alt="PrudentMate logo" class="hero-logo">
+
+<h1>Prudent<span class="mate">Mate</span></h1>
+
+<p class="tagline">Prudent Mate. Stronger Business.</p>
+
+<p class="description">
+Business Technology Partner for small and medium businesses.
+We help organizations modernize IT, secure infrastructure, adopt Microsoft 365 & Cloud solutions,
+and implement practical AI automation.
+</p>
+
+<div class="hero-actions">
+    <a href="mailto:office@prudentmate.com?subject=PrudentMate%20Consultation%20Request" class="btn">Book a Consultation</a>
+    <a href="#services" class="btn btn-secondary">Explore Services</a>
+</div>
+
+<div class="services-wrap" id="services">
+    <h2 class="services-title">How can we help your business?</h2>
+    <p class="services-subtitle">Choose a topic below. Each card opens an email with a pre-filled subject.</p>
+
+    <div class="services">
+
+        <a class="card" href="mailto:office@prudentmate.com?subject=IT%20Consulting%20Inquiry">
+            <img src="/images/icons/svg/icon_consulting.svg" alt="IT Consulting" class="service-icon">
+            <h3>IT Consulting</h3>
+            <p>Technology strategy, architecture and digital transformation.</p>
+            <span class="link">Ask about IT Consulting →</span>
+        </a>
+
+        <a class="card" href="mailto:office@prudentmate.com?subject=Cloud%20and%20Microsoft%20365%20Inquiry">
+            <img src="/images/icons/svg/icon_cloud.svg" alt="Cloud & Microsoft 365" class="service-icon">
+            <h3>Cloud & Microsoft 365</h3>
+            <p>Migration, administration, licensing and cloud solutions.</p>
+            <span class="link">Ask about Cloud & M365 →</span>
+        </a>
+
+        <a class="card" href="mailto:office@prudentmate.com?subject=Cybersecurity%20Inquiry">
+            <img src="/images/icons/svg/icon_cybersecurity.svg" alt="Cybersecurity" class="service-icon">
+            <h3>Cybersecurity</h3>
+            <p>Assessments, protection, hardening and security governance.</p>
+            <span class="link">Ask about Cybersecurity →</span>
+        </a>
+
+        <a class="card" href="mailto:office@prudentmate.com?subject=AI%20Integration%20Inquiry">
+            <img src="/images/icons/svg/icon_ai.svg" alt="AI Integration" class="service-icon">
+            <h3>AI Integration</h3>
+            <p>AI adoption, automation and practical business use cases.</p>
+            <span class="link">Ask about AI Integration →</span>
+        </a>
+
+        <a class="card" href="mailto:office@prudentmate.com?subject=Managed%20IT%20Services%20Inquiry">
+            <img src="/images/icons/svg/icon_managed_it.svg" alt="Managed IT Services" class="service-icon">
+            <h3>Managed IT Services</h3>
+            <p>Remote support, monitoring, administration and operations.</p>
+            <span class="link">Ask about Managed IT →</span>
+        </a>
+
+    </div>
+</div>
+
+</div>
+</section>
+
+<section class="trust">
+<div class="container trust-grid">
+
+    <div class="trust-item">
+		<img src="/images/icons/svg/icon_experience.svg"
+         class="stat-icon"
+         alt="Experience">
+
+		<div>
+			<strong>18+</strong>
+			<span>Years of enterprise IT experience</span>
+		</div>
+	</div>
+
+	<div class="trust-item">
+		<img src="/images/icons/svg/icon_users.svg"
+			class="stat-icon"
+			alt="Users">
+	
+		<div>
+			<strong>1000+</strong>
+			<span>Users supported and managed</span>
+		</div>
+	</div>
+
+    <div class="trust-item">
+		<img src="/images/icons/svg/icon_availability.svg"
+			class="stat-icon"
+			alt="Availability">
+
+		<div>
+			<strong>99%</strong>
+			<span>Service availability</span>
+		</div>
+	</div>
+
+	<div class="trust-item">
+		<img src="/images/icons/svg/icon_areas.svg"
+			class="stat-icon"
+			alt="Service Areas">
+
+		<div>
+			<strong>5</strong>
+			<span>Core service areas</span>
+		</div>
+	</div>
+
+</div>
+</section>
+
+<section class="about-section" id="about">
+<div class="container">
+
+<h2 class="section-title">Why PrudentMate?</h2>
+
+<p class="about-text">
+PrudentMate combines enterprise-level IT leadership with a pragmatic SMB-focused approach.
+Our experience comes from banking, industrial enterprises, Microsoft technologies,
+cybersecurity, infrastructure operations and AI-driven automation.
+We help businesses make technology decisions that are practical, secure and cost-effective.
+</p>
+
+</div>
+</section>
+
+<section class="contact-band" id="contact">
+<div class="container">
+
+<div class="contact-box">
+    <div>
+        <h2>Have a question or project in mind?</h2>
+        <p>Choose a topic above or contact us directly.</p>
+    </div>
+
+    <a href="mailto:office@prudentmate.com?subject=PrudentMate%20Consultation%20Request" class="btn">
+        office@prudentmate.com
+    </a>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer-row">
+    <span>© 2026 PrudentMate. All rights reserved.</span>
+    <span>Graz, Austria</span>
+    <a href="https://www.linkedin.com/company/prudentmate/about/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</footer>
+
+</body>
+</html>
