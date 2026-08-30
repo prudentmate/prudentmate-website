@@ -232,6 +232,19 @@ h1{
     border-color:#bcd2ff;
 }
 
+.card.primary-service{
+    transform:scale(1.05);
+    z-index:2;
+    border-color:#9fc0ff;
+    box-shadow:0 16px 38px rgba(7,29,73,.14);
+}
+
+.card.primary-service:hover{
+    transform:scale(1.05) translateY(-6px);
+    box-shadow:0 20px 42px rgba(7,29,73,.17);
+    border-color:#78a7ff;
+}
+
 .service-icon{
     width:76px;
     height:76px;
@@ -379,6 +392,11 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .card.primary-service,
+    .card.primary-service:hover{
+        transform:none;
+    }
+
     .trust-grid{
         grid-template-columns:repeat(2,1fr);
     }
@@ -470,15 +488,29 @@ and implement practical AI automation.
 
 <div class="services-wrap" id="services">
     <h2 class="services-title">How can we help your business?</h2>
-    <p class="services-subtitle">Choose a topic below. Each card opens an email with a pre-filled subject.</p>
+    <p class="services-subtitle">Choose a service below to learn more or contact us.</p>
 
     <div class="services">
+
+        <a class="card" href="mailto:office@prudentmate.com?subject=AI%20Integration%20Inquiry">
+            <img src="/images/icons/svg/icon_ai.svg" alt="AI Integration" class="service-icon">
+            <h3>AI Integration</h3>
+            <p>AI adoption, automation and practical business use cases.</p>
+            <span class="link">Ask about AI Integration →</span>
+        </a>
 
         <a class="card" href="mailto:office@prudentmate.com?subject=IT%20Consulting%20Inquiry">
             <img src="/images/icons/svg/icon_consulting.svg" alt="IT Consulting" class="service-icon">
             <h3>IT Consulting</h3>
             <p>Technology strategy, architecture and digital transformation.</p>
             <span class="link">Ask about IT Consulting →</span>
+        </a>
+
+        <a class="card primary-service" href="/intpages/managed-it-services.html">
+            <img src="/images/icons/svg/icon_managed_it.svg" alt="Managed IT Services" class="service-icon">
+            <h3>Managed IT Services</h3>
+            <p>Remote support, monitoring, administration and operations.</p>
+            <span class="link">Explore Managed IT Services →</span>
         </a>
 
         <a class="card" href="mailto:office@prudentmate.com?subject=Cloud%20and%20Microsoft%20365%20Inquiry">
@@ -493,20 +525,6 @@ and implement practical AI automation.
             <h3>Cybersecurity</h3>
             <p>Assessments, protection, hardening and security governance.</p>
             <span class="link">Ask about Cybersecurity →</span>
-        </a>
-
-        <a class="card" href="mailto:office@prudentmate.com?subject=AI%20Integration%20Inquiry">
-            <img src="/images/icons/svg/icon_ai.svg" alt="AI Integration" class="service-icon">
-            <h3>AI Integration</h3>
-            <p>AI adoption, automation and practical business use cases.</p>
-            <span class="link">Ask about AI Integration →</span>
-        </a>
-
-        <a class="card" href="/intpages/managed-it-services.html">
-            <img src="/images/icons/svg/icon_managed_it.svg" alt="Managed IT Services" class="service-icon">
-            <h3>Managed IT Services</h3>
-            <p>Remote support, monitoring, administration and operations.</p>
-            <span class="link">Explore Managed IT Services →</span>
         </a>
 
     </div>
